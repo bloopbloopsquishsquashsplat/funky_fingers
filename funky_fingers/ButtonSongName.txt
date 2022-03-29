@@ -28,7 +28,7 @@ public class ButtonSongName : MonoBehaviour
 
             songNames[i] = songName;
 
-            Debug.Log(songName);
+            
         }
         //All buttons in current game object and current screen are stored in an array
         Button[] buttons = this.GetComponentsInChildren<Button>();
