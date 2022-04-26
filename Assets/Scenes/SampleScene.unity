@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &8344213
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +206,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> fd7f2704a10aab6806d65f1dbf3e4f5bc498c11b
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +218,10 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 519420029}
+>>>>>>> fd7f2704a10aab6806d65f1dbf3e4f5bc498c11b
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -222,6 +229,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+=======
+--- !u!81 &519420029
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+>>>>>>> fd7f2704a10aab6806d65f1dbf3e4f5bc498c11b
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -232,7 +250,11 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
+<<<<<<< HEAD
   m_BackGroundColor: {r: 0.17176831, g: 1, b: 0.0039215684, a: 0}
+=======
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+>>>>>>> fd7f2704a10aab6806d65f1dbf3e4f5bc498c11b
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -274,6 +296,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
+<<<<<<< HEAD
   m_LocalScale: {x: 0.1338, y: 0.1338, z: 0.1338}
   m_Children: []
   m_Father: {fileID: 0}
@@ -583,4 +606,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+=======
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+>>>>>>> fd7f2704a10aab6806d65f1dbf3e4f5bc498c11b
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -46,7 +46,11 @@ public class ButtonSongName : MonoBehaviour
         {
             Text buttonText = buttons[i].GetComponentInChildren<Text>();
 
+<<<<<<< HEAD
             namesToButtons.Add(songNames[i], buttons[i]);
+=======
+            namesToButtons.Add(musicFiles[i], buttons[i]);
+>>>>>>> fd7f2704a10aab6806d65f1dbf3e4f5bc498c11b
         
             buttonText.text = songNames[i];
         }
