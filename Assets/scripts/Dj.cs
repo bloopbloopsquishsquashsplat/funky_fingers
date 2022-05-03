@@ -19,6 +19,6 @@ public class Dj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bramptom.Play()
+        bramptom.Play();
     }
 }

@@ -1,6 +1,5 @@
 using UnityEngine.Audio;
 using UnityEngine;
-[Serializable]
 public class AudioManager : MonoBehaviour
 {
     //get all sounds in resources folder, make object array size
@@ -20,13 +19,17 @@ public class AudioManager : MonoBehaviour
     }
 
     // Update is called once per frame
+    void Update()
+    {
+        
+    }
     public void Play(string name)
     {
         foreach(Sound s in sounds)
         {
             if(s.name == name)
             {
-                s.source.Play();
+                s.source.time = 10;
             }
         }
     }
