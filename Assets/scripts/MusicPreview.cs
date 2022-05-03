@@ -65,11 +65,11 @@ public class MusicPreview : MonoBehaviour
 
     
 
-    public void OnMouseExit()
-    {
-        FindObjectOfType<AudioManager>().Stop();
-        
-    }
+   // public void OnMouseExit()
+   // {
+   //     FindObjectOfType<AudioManager>().Stop();
+   //     
+   // }
     
     public void Click()
     {
