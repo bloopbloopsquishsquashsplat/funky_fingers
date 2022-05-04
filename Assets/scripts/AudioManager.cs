@@ -1,5 +1,7 @@
 using UnityEngine.Audio;
 using UnityEngine;
+using System.Collections;
+
 public class AudioManager : MonoBehaviour
 {
     //get all sounds in resources folder, make object array size
@@ -26,17 +28,15 @@ public class AudioManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void Play(string name)
+    public void Play(string nameInput)
     {
         foreach(Sound s in sounds)
         {
             if(s.name == nameInput)
             {
                 s.source.time = 10;
+                //s.source.PlayClipAtPoint(s.clip, new Vector3(5, 1, 2));
+                s.source.Play();
             }
         }
     }

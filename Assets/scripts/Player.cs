@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Sprite player_left;
-    public Sprite player_right;
-    public Sprite player_up;
-    public Sprite player_down;
-    
+    private GameObject player1;
+    private GameObject player2;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,26 +15,53 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player_input();
+        if(player1 && player2)
+        {
+            two_player_input();
+        }else if (player1)
+        {
+            one_player_input();
+        }
     }
 
-    private void player_input()
+    private void one_player_input()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = player_left;
+            //Moves Player1
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = player_right;
+            //Moves Player1
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = player_up;
+            //Moves Player1
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = player_down;
+            //Moves Player1
+        }
+    }
+
+    private void two_player_input()
+    {
+        one_player_input();
+        if (Input.GetKey(KeyCode.A))
+        {
+            //Moves Player2
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            //Moves Player2
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            //Moves Player2
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            //Moves Player2
         }
     }
 }
