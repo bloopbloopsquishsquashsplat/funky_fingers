@@ -24,7 +24,6 @@ public class Dj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //bramptom.Play();
-        //audio.GetSpectrumData(spectrum, 0, FFTWindow.BlackmanHarris);
+        bramptom.Play();
     }
 }
