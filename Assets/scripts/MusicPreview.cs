@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.Audio;
-
+[System.Serializable]
 public class MusicPreview : MonoBehaviour
 {
     //change it from public when function call passing parameter songChoice is made
-    public string songChoice;
+    public static string songChoice;
     protected string songPreviewed;
     //ButtonSongName bsn;
     public string BtnTest(Button btn)
@@ -44,7 +44,8 @@ public class MusicPreview : MonoBehaviour
             if(dictcurr.name == btn.name)
             {
                 songPreviewed = item.Key;
-                FindObjectOfType<AudioManager>().Play(item.Key);
+                playCurrent(item.Key);
+                //FindObjectOfType<AudioManager>().Play(item.Key);
                 
                 
                 
@@ -64,7 +65,10 @@ public class MusicPreview : MonoBehaviour
     }
 
     
-
+    public static void playCurrent(string sname)
+    {
+        FindObjectOfType<AudioManager>().Play(sname);
+    }
     public void OnMouseExit()
     {
         FindObjectOfType<AudioManager>().Stop();

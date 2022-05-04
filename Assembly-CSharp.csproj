@@ -39,9 +39,14 @@
      <Compile Include="Assets/scripts/ScreenLoader.cs" />
      <Compile Include="Assets/scripts/Sound.cs" />
      <Compile Include="Assets/scripts/Dj.cs" />
+     <Compile Include="Assets/scripts/Player.cs" />
+     <Compile Include="Assets/scripts/ButtonController.cs" />
      <Compile Include="Assets/scripts/MusicPreview.cs" />
      <Compile Include="Assets/scripts/AudioManager.cs" />
      <Compile Include="Assets/scripts/ButtonSongName.cs" />
+     <Compile Include="Assets/scripts/ArrowMovement.cs" />
+     <Compile Include="Assets/scripts/BPM.cs" />
+     <None Include="Assets/README.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/2020.3.32f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
