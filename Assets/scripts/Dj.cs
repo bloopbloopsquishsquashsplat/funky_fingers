@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Dj : MonoBehaviour
 {
     private float bramptom_bpm = 99;
