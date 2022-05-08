@@ -276,7 +276,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1149708779
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 813b8f42d14824c51b88bb4a5492dd4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -392,7 +392,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1149708779
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 20e60a9b420a34f43a60ab90e00203e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -633,7 +633,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1149708779
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ebaddfe2b301aa644aa2fbd152638e97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -796,7 +796,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1149708779
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 01eefd38f9abf4281a90689898be0c9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -859,8 +859,8 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: 42fe9631c60daa348ba07878922d3bd1, type: 3}
   pressedImages:
   - {fileID: 21300000, guid: e192a31b56711a44b9e2f6a4aab804da, type: 3}
-  - {fileID: 21300000, guid: 42fe9631c60daa348ba07878922d3bd1, type: 3}
-  - {fileID: 21300000, guid: f9315413bbd124cc38041c3e75f9cd2e, type: 3}
+  - {fileID: 21300000, guid: db4deddc23e35423989962c7ec3d5e24, type: 3}
+  - {fileID: 21300000, guid: c3c1f34990e92ad47ab0d0014d3a5b54, type: 3}
   - {fileID: 21300000, guid: ebaddfe2b301aa644aa2fbd152638e97, type: 3}
   keyToPress: 276
 --- !u!212 &911680440
@@ -902,7 +902,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1149708779
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 42fe9631c60daa348ba07878922d3bd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1183,7 +1183,7 @@ MonoBehaviour:
   pressedImages:
   - {fileID: 21300000, guid: e192a31b56711a44b9e2f6a4aab804da, type: 3}
   - {fileID: 21300000, guid: 42fe9631c60daa348ba07878922d3bd1, type: 3}
-  - {fileID: 21300000, guid: f9315413bbd124cc38041c3e75f9cd2e, type: 3}
+  - {fileID: 21300000, guid: db4deddc23e35423989962c7ec3d5e24, type: 3}
   - {fileID: 21300000, guid: ebaddfe2b301aa644aa2fbd152638e97, type: 3}
   keyToPress: 275
 --- !u!212 &1102501640
@@ -1225,7 +1225,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1149708779
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c3c1f34990e92ad47ab0d0014d3a5b54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1522,7 +1522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultImage: {fileID: 21300000, guid: e192a31b56711a44b9e2f6a4aab804da, type: 3}
   pressedImages:
-  - {fileID: 21300000, guid: dbbfac3a019f34ce7863525a26d73e26, type: 3}
+  - {fileID: 21300000, guid: db4deddc23e35423989962c7ec3d5e24, type: 3}
   - {fileID: 21300000, guid: 42fe9631c60daa348ba07878922d3bd1, type: 3}
   - {fileID: 21300000, guid: c3c1f34990e92ad47ab0d0014d3a5b54, type: 3}
   - {fileID: 21300000, guid: ebaddfe2b301aa644aa2fbd152638e97, type: 3}
@@ -1566,7 +1566,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1149708779
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e192a31b56711a44b9e2f6a4aab804da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1880,7 +1880,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1149708779
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 29f15f3783e624dc6b21e9fa0431171b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
