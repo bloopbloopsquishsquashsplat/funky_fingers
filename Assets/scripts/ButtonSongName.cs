@@ -11,7 +11,7 @@ public class ButtonSongName : MonoBehaviour
     public Dictionary<string, Button> namesToButtons = new Dictionary<string, Button>();
     void Start()
     {
-        
+        ScreenLoader.isReady=false;
         //string of music taken from folder in computer
         //Tried using Application.dataPath but this goes to Assets folder only, not to music and doesn't work
         //"/home/eswaggy1234/sounds"

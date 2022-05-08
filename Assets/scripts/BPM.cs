@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class BPM : MonoBehaviour
 {
+    //public List<GameObject> arrows = new List<GameObject>();
     private float[] spectrum;
     private AudioManager am;
     private static BPM beatspermin;
+    
     public static float specValue
     {
         get;
@@ -22,6 +24,7 @@ public class BPM : MonoBehaviour
         am = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         am.Play(song);
     }
+    /*
     void AnalyzeSpectrum()
     {
         int size = 256;
@@ -44,26 +47,45 @@ public class BPM : MonoBehaviour
             {
                 size--;
             }
-            */
+            
         }
         float avg = sum / (float)size;
-        for(int i = 0; i < size; i++)
+        
+        //int beat = 0;
+        for(int i=0; i <size; i++)
         {
-            if(spectrum[i] > avg)
+            if((spectrum[i])>avg*100)
             {
-                Debug.Log("beat");
+                //beat++;
+                int rand = Random.Range(0,4);
+                GameObject curr = ArrowMovement.arrows[rand];
+                curr.transform.position = new Vector2(ArrowMovement.xvalues[rand], 50);
+                
+                
+                Move(curr);
+                //StartCoroutine(Move());
+                
             }
         }
-        
         //Debug.Log(bin);
         //Debug.Log(spectrum[9]);
         //Debug.Log(spectrum[10]);
         //Debug.Log(spectrum[11]);
     }
     // Update is called once per frame
+    void Move(GameObject game)
+    {
+        
+            //change constant seconds to respawn
+            //yield return new WaitForSeconds(2f);
+            transform.position -= new Vector3(0f, 100 * Time.deltaTime, 0f);
+            //Debug.Log(game.transform.position.y);
+        
+    }
     void Update()
     {
         AnalyzeSpectrum();
+        
         //AudioListener.GetSpectrumData(spectrum, 0, Window);
         
         //if(spectrum != null && spectrum.Length > 0)
@@ -71,4 +93,5 @@ public class BPM : MonoBehaviour
         //    specValue = spectrum[0] * 100;
         //}
     }
+    */
 }

@@ -5,16 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class ScreenLoader : MonoBehaviour
 {
-    
+    public static bool isReady=true;
     public void LoadNextScene()
     {
         int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currSceneIndex+1);
+        if(isReady==true)
+        {
+            SceneManager.LoadScene(currSceneIndex+1);
+        }
+        
 
     }
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
+
         //test
     }
     

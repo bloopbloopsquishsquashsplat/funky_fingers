@@ -79,6 +79,7 @@ public class MusicPreview : MonoBehaviour
     {
         songChoice = songPreviewed;
         Debug.Log(songChoice);
+        ScreenLoader.isReady = true;
     }
     
 

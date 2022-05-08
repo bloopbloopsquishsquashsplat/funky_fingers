@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class ArrowMovement : MonoBehaviour
 {
+    public List<GameObject> moves = new List<GameObject>();
     public List<GameObject> arrows = new List<GameObject>();
     public List<int> xvalues = new List<int>();
+    public AudioManager audiosrc;
     //in editor respawn time needs to equal time it takes in between beats
     //and beatTempo needs to equal bpm
-    public float beatTempo;
-    public float respawnTime = 30.0f;
+    public float beatTempo = 128f;
+    public bool newobject;
+    public float respawnTime;
     // Start is called before the first frame update
-    void Start()
+    
+     void Start()
     {
-        beatTempo = beatTempo / 60f;
+        audiosrc = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        respawnTime = 60f / beatTempo;
         GameObject g = GameObject.Find("arrow_template_down");
         arrows.Add(g);
         xvalues.Add(-20);
@@ -32,19 +37,43 @@ public class ArrowMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
-        
-        
+                if(!audiosrc.GetComponent<AudioSource>().isPlaying)
+                {
+                    StopCoroutine(Move());
+                    Debug.Log("end");
+                }
+                transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
+                
+            
+        //2nd iteration
+        //GameObject newgo = Instantiate(this);
         //for every beatTempo*Time.deltaTime generate random choice of arrow
     }
     IEnumerator Move()
     {
+        
+       
         while(true)
         {
+            
             yield return new WaitForSeconds(respawnTime);
             int rand = Random.Range(0,4);
             GameObject curr = arrows[rand];
-            curr.transform.position = new Vector2(xvalues[rand], 50);
+            
+            //GameObject newgo = Instantiate(curr);
+            //curr.transform.position = new Vector2(xvalues[rand], 50);
+            if(curr.transform.position.y > -200)
+            {
+                continue;
+            }
+            else{
+                curr.transform.position = new Vector2(xvalues[rand], 50);
+            }
+                
+             
+            
         }
     }
+    
+    
 }
