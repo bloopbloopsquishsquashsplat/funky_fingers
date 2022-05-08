@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private GameObject player1;
-    private GameObject player2;
+    public Sprite player_left;
+    public Sprite player_right;
+    public Sprite player_up;
+    public Sprite player_down;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,53 +18,26 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player1 && player2)
-        {
-            two_player_input();
-        }else if (player1)
-        {
-            one_player_input();
-        }
+        player_input();
     }
 
-    private void one_player_input()
+    private void player_input()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            //Moves Player1
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = player_left;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            //Moves Player1
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = player_right;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            //Moves Player1
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = player_up;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            //Moves Player1
-        }
-    }
-
-    private void two_player_input()
-    {
-        one_player_input();
-        if (Input.GetKey(KeyCode.A))
-        {
-            //Moves Player2
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            //Moves Player2
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            //Moves Player2
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            //Moves Player2
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = player_down;
         }
     }
 }
