@@ -1633,33 +1633,33 @@ MonoBehaviour:
   sounds:
   - name: ghost
     clip: {fileID: 8300000, guid: 2819e7a97a1b27a42aa983b939d27a64, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: bramptom
     clip: {fileID: 8300000, guid: 743fbabb7e12b48f8801776c2b0b3fd1, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: freaky_ride
     clip: {fileID: 8300000, guid: 7e4d5f0b8184dcf4881e6dd6f723ae5a, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: fruitcakeandcookies
     clip: {fileID: 8300000, guid: 47154fc9e360dad44b8896b31b46aa63, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: mc
     clip: {fileID: 8300000, guid: 7a2d136f9348649af8ec20bfe38c6eda, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: oblivion
     clip: {fileID: 8300000, guid: e8511e2dec0e6114b8da8af1b419cfa8, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
 --- !u!4 &687361113
 Transform:

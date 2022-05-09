@@ -20,7 +20,7 @@ public class NoteObject : MonoBehaviour
             if(canBePressed){
                 gameObject.SetActive(false);
 
-                //GameManager.instance.NoteHit();
+                ArrowMovement.instance.NoteHit();
             }
         }
     }
@@ -38,7 +38,7 @@ public class NoteObject : MonoBehaviour
         {
             canBePressed = false;
 
-            //GameManager.instance.NoteMissed();
+            ArrowMovement.instance.NoteMissed();
         }
     }
 }
