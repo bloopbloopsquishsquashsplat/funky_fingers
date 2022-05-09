@@ -47,13 +47,13 @@ public class ButtonSongName : MonoBehaviour
 
         for(int i = 0; i < buttons.Length; i++)
         {
-			//Debug.Log(i);
+			Debug.Log(i);
            
 			Text buttonText = buttons[i].GetComponentInChildren<Text>();
-			
+			Debug.Log(buttons[i]);
             namesToButtons.Add(songNames[i], buttons[i]);
         
-            //buttonText.text = songNames[i];
+            buttonText.text = songNames[i];
 			
         }
         
