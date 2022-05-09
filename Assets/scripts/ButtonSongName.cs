@@ -9,6 +9,7 @@ public class ButtonSongName : MonoBehaviour
     
     // Start is called before the first frame update
     public Dictionary<string, Button> namesToButtons = new Dictionary<string, Button>();
+
     void Start()
     {
         ScreenLoader.isReady=false;
@@ -36,10 +37,12 @@ public class ButtonSongName : MonoBehaviour
 
             songNames[i] = songName;
             //Name of music file
-            //Debug.Log(musicFiles[i]);
+            Debug.Log(musicFiles[i]);
         }
         //All buttons in current game object and current screen are stored in an array
         Button[] buttons = this.GetComponentsInChildren<Button>();
+		//Debug.Log(buttons);
+		//Debug.Log(songNames);
 
 		//Debug.Log(buttons.Length);
 
@@ -50,9 +53,14 @@ public class ButtonSongName : MonoBehaviour
 			Debug.Log(i);
            
 			Text buttonText = buttons[i].GetComponentInChildren<Text>();
-			Debug.Log(buttons[i]);
+			
             namesToButtons.Add(songNames[i], buttons[i]);
-        
+        	
+
+			
+			Debug.Log(buttonText.text);
+
+			Debug.Log(songNames[i]);
             buttonText.text = songNames[i];
 			
         }
