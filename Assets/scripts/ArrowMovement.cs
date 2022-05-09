@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ArrowMovement : MonoBehaviour
 {
@@ -40,7 +41,10 @@ public class ArrowMovement : MonoBehaviour
                 if(!audiosrc.GetComponent<AudioSource>().isPlaying)
                 {
                     StopCoroutine(Move());
-                    Debug.Log("end");
+                    Debug.Log("song ended");
+					//int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            		//SceneManager.LoadScene(currSceneIndex+1);
+				
                 }
                 transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
                 
