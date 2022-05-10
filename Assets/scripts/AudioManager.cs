@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     
     // Start is called before the first frame update
     public Sound[] sounds;
-    public AudioSource Song;
+    public static AudioSource Song;
     void Awake()
     {
         DontDestroyOnLoad(this);
@@ -68,6 +68,7 @@ public class AudioManager : MonoBehaviour
 	{
 		if (Song)
 		{
+			Song.time = 0;
 			Song.Play();
 		}else
 		{
