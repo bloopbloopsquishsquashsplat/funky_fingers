@@ -14,6 +14,7 @@ public class ArrowMovement : MonoBehaviour
     public float beatTempo = 128f;
     public bool newobject;
     public float respawnTime;
+	public bool playerReady = false;
     // Start is called before the first frame update
     
      void Start()
@@ -38,16 +39,17 @@ public class ArrowMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-                if(!audiosrc.GetComponent<AudioSource>().isPlaying)
-                {
-                    StopCoroutine(Move());
-                    Debug.Log("song ended");
+                //if(!audiosrc.GetComponent<AudioSource>().isPlaying)
+                //{
+                    //StopCoroutine(Move());
+                    //Debug.Log("song ended");
 					//int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
             		//SceneManager.LoadScene(currSceneIndex+1);
 				
+                //}
+				if(playerReady){
+					transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
                 }
-                transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
-                
             
         //2nd iteration
         //GameObject newgo = Instantiate(this);
@@ -79,5 +81,8 @@ public class ArrowMovement : MonoBehaviour
         }
     }
     
-    
+	public void PlayerIsReady()
+	{
+		playerReady = true;
+    }
 }

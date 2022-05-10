@@ -10,8 +10,7 @@ public class AudioManager : MonoBehaviour
     
     // Start is called before the first frame update
     public Sound[] sounds;
-    
-    
+    public AudioSource Song;
     void Awake()
     {
         DontDestroyOnLoad(this);
@@ -51,5 +50,30 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
+	
+	public void ChooseSong()
+	{
+		foreach(Sound s in sounds)
+        {
+            if(s.source.isPlaying)
+            {
+                Song = s.source;
+            }
+        }
+		Debug.Log("GotSong!");
+		Debug.Log(Song);
+	}
+
+	public void PlayChosenSong()
+	{
+		if (Song)
+		{
+			Song.Play();
+		}else
+		{
+			Debug.Log("no song loaded. AudioManager.cs Line:72");
+		}
+	}
+
 }
 

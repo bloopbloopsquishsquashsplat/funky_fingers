@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ScreenLoader : MonoBehaviour
 {
     public static bool isReady=true;
+
     public void LoadNextScene()
     {
         int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -14,8 +15,8 @@ public class ScreenLoader : MonoBehaviour
             SceneManager.LoadScene(currSceneIndex+1);
         }
         
-
     }
+
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
@@ -28,4 +29,11 @@ public class ScreenLoader : MonoBehaviour
         Debug.Log("Quit!");
         Application.Quit();
     }
+
+	public void PlayGame()
+	{
+		SceneManager.LoadScene(1);
+		
+		//AudioManager.PlayChosenSong();
+	}
 }
