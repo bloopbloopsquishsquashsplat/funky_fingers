@@ -21,19 +21,18 @@ public class ArrowMovement : MonoBehaviour
     {
         audiosrc = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         respawnTime = 60f / beatTempo;
-        GameObject g = GameObject.Find("arrow_template_down");
-        arrows.Add(g);
-        xvalues.Add(-20);
-        g = GameObject.Find("arrow_template_up");
-        arrows.Add(g);
-        xvalues.Add(20);
-        g = GameObject.Find("arrow_template_right");
-        arrows.Add(g);
-        xvalues.Add(60);
-        g = GameObject.Find("arrow_template_left");
-        arrows.Add(g);
-        xvalues.Add(-60);
-        StartCoroutine(Move());
+        //GameObject g = GameObject.Find("arrow_template_down");
+        //arrows.Add(g);
+        //xvalues.Add(-20);
+        //g = GameObject.Find("arrow_template_up");
+        //arrows.Add(g);
+        //xvalues.Add(20);
+        //g = GameObject.Find("arrow_template_right");
+        //arrows.Add(g);
+        //xvalues.Add(60);
+        //g = GameObject.Find("arrow_template_left");
+        //arrows.Add(g);
+        //xvalues.Add(-60);
     }
 
     // Update is called once per frame
@@ -48,18 +47,19 @@ public class ArrowMovement : MonoBehaviour
 				
                 //}
 				if(playerReady){
-					transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
+					StartCoroutine(Move(50000f));
                 }
             
         //2nd iteration
         //GameObject newgo = Instantiate(this);
         //for every beatTempo*Time.deltaTime generate random choice of arrow
     }
-    IEnumerator Move()
+    IEnumerator Move(float time)
     {
         
-       
-        while(true)
+       	float elapsedTime = 0;
+        //while(true)
+		while(elapsedTime < time)
         {
             
             yield return new WaitForSeconds(respawnTime);
@@ -68,16 +68,19 @@ public class ArrowMovement : MonoBehaviour
             
             //GameObject newgo = Instantiate(curr);
             //curr.transform.position = new Vector2(xvalues[rand], 50);
-            if(curr.transform.position.y > -200)
+            if(curr.transform.position.y < 200)
             {
+				curr.transform.position += new Vector3(0f, beatTempo * Time.deltaTime, 0f);
+				Debug.Log(beatTempo * Time.deltaTime);
+				//GetComponent<RigidBody>().velocity *= 999f/1000f;
                 continue;
             }
-            else{
+            else
+			{
                 curr.transform.position = new Vector2(xvalues[rand], 50);
             }
-                
-             
-            
+            elapsedTime += Time.deltaTime;
+			yield return null;
         }
     }
     
