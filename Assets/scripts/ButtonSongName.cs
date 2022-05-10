@@ -16,7 +16,7 @@ public class ButtonSongName : MonoBehaviour
         //string of music taken from folder in computer
         //Tried using Application.dataPath but this goes to Assets folder only, not to music and doesn't work
         //"/home/eswaggy1234/sounds"
-        string[] musicFiles = Directory.GetFiles("Assets/Resources/sounds/funky_fingers_music", "*.mp3");
+        string[] musicFiles = Directory.GetFiles("Assets/Resources/sounds/funky_fingers_music/", "*.mp3");
         
         //Debug.Log(musicFiles.Length);
         //get song name of each mp3 file.
