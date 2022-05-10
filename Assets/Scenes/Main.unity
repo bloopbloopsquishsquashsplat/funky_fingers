@@ -786,6 +786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395100343}
   - component: {fileID: 395100344}
+  - component: {fileID: 395100345}
   m_Layer: 0
   m_Name: moving arrows
   m_TagString: Untagged
@@ -855,6 +856,29 @@ MonoBehaviour:
     volume: 0
     pitch: 1
     source: {fileID: 0}
+--- !u!114 &395100345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395100341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736bf772cf0244989a8a81243c3e55b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrows:
+  - {fileID: 654620528}
+  - {fileID: 98494208}
+  - {fileID: 963598144}
+  - {fileID: 1450986594}
+  xvalues: 
+  audiosrc: {fileID: 0}
+  beatTempo: 128
+  newobject: 0
+  respawnTime: 0
+  playerReady: 0
 --- !u!1 &497117731
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736bf772cf0244989a8a81243c3e55b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moves: []
   arrows: []
   xvalues: 
   audiosrc: {fileID: 0}
@@ -2013,7 +2036,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736bf772cf0244989a8a81243c3e55b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moves: []
   arrows: []
   xvalues: 
   audiosrc: {fileID: 0}
@@ -3275,7 +3297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736bf772cf0244989a8a81243c3e55b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moves: []
   arrows: []
   xvalues: 
   audiosrc: {fileID: 0}
@@ -3380,7 +3401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736bf772cf0244989a8a81243c3e55b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moves: []
   arrows: []
   xvalues: 
   audiosrc: {fileID: 0}

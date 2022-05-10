@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ArrowMovement : MonoBehaviour
 {
-    public List<GameObject> moves = new List<GameObject>();
+    //public List<GameObject> moves = new List<GameObject>();
     public List<GameObject> arrows = new List<GameObject>();
     public List<int> xvalues = new List<int>();
     public AudioManager audiosrc;
@@ -21,17 +21,18 @@ public class ArrowMovement : MonoBehaviour
     {
         audiosrc = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         respawnTime = 60f / beatTempo;
-        GameObject g = GameObject.Find("arrow_template_down");
-        arrows.Add(g);
+		//respawnTime = beatTempo;
+        //GameObject g = GameObject.Find("arrow_template_down");
+        //arrows.Add(g);
         xvalues.Add(-20);
-        g = GameObject.Find("arrow_template_up");
-        arrows.Add(g);
+        //g = GameObject.Find("arrow_template_up");
+        //arrows.Add(g);
         xvalues.Add(20);
-        g = GameObject.Find("arrow_template_right");
-        arrows.Add(g);
+        //g = GameObject.Find("arrow_template_right");
+        //arrows.Add(g);
         xvalues.Add(60);
-        g = GameObject.Find("arrow_template_left");
-        arrows.Add(g);
+        //g = GameObject.Find("arrow_template_left");
+        //arrows.Add(g);
         xvalues.Add(-60);
     }
 
@@ -65,16 +66,16 @@ public class ArrowMovement : MonoBehaviour
             
             //GameObject newgo = Instantiate(curr);
             //curr.transform.position = new Vector2(xvalues[rand], 50);
-            if(curr.transform.position.y < 200)
+            if(curr.transform.position.y < 200 && curr.transform.position.y > -200)
             {
 				curr.transform.position += new Vector3(0f, beatTempo * Time.deltaTime, 0f);
-				Debug.Log(beatTempo * Time.deltaTime);
+				//Debug.Log(beatTempo * Time.deltaTime);
 				//GetComponent<RigidBody>().velocity *= 999f/1000f;
                 continue;
             }
             else
 			{
-                curr.transform.position = new Vector2(xvalues[rand], 50);
+                curr.transform.position = new Vector2(xvalues[rand], -18);
             }
             elapsedTime += Time.deltaTime;
 			yield return null;
@@ -85,7 +86,7 @@ public class ArrowMovement : MonoBehaviour
 	{
 		if(playerReady)
 		{
-				StartCoroutine(Move(2f));
+				StartCoroutine(Move(300f));
 		}
 	}	
 
