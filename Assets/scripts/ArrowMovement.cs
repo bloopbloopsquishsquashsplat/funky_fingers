@@ -21,18 +21,18 @@ public class ArrowMovement : MonoBehaviour
     {
         audiosrc = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         respawnTime = 60f / beatTempo;
-        //GameObject g = GameObject.Find("arrow_template_down");
-        //arrows.Add(g);
-        //xvalues.Add(-20);
-        //g = GameObject.Find("arrow_template_up");
-        //arrows.Add(g);
-        //xvalues.Add(20);
-        //g = GameObject.Find("arrow_template_right");
-        //arrows.Add(g);
-        //xvalues.Add(60);
-        //g = GameObject.Find("arrow_template_left");
-        //arrows.Add(g);
-        //xvalues.Add(-60);
+        GameObject g = GameObject.Find("arrow_template_down");
+        arrows.Add(g);
+        xvalues.Add(-20);
+        g = GameObject.Find("arrow_template_up");
+        arrows.Add(g);
+        xvalues.Add(20);
+        g = GameObject.Find("arrow_template_right");
+        arrows.Add(g);
+        xvalues.Add(60);
+        g = GameObject.Find("arrow_template_left");
+        arrows.Add(g);
+        xvalues.Add(-60);
     }
 
     // Update is called once per frame
@@ -46,9 +46,6 @@ public class ArrowMovement : MonoBehaviour
             		//SceneManager.LoadScene(currSceneIndex+1);
 				
                 //}
-				if(playerReady){
-					StartCoroutine(Move(50000f));
-                }
             
         //2nd iteration
         //GameObject newgo = Instantiate(this);
@@ -84,6 +81,14 @@ public class ArrowMovement : MonoBehaviour
         }
     }
     
+	public void StartArrowMovement()
+	{
+		if(playerReady)
+		{
+				StartCoroutine(Move(2f));
+		}
+	}	
+
 	public void PlayerIsReady()
 	{
 		playerReady = true;
