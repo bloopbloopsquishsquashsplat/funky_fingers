@@ -36,4 +36,9 @@ public class ScreenLoader : MonoBehaviour
 		
 		//AudioManager.PlayChosenSong();
 	}
+
+	public void PauseScreen()
+	{
+		SceneManager.LoadScene(2);
+	}
 }
